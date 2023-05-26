@@ -5,7 +5,8 @@ class SelectYourCabinPage {
     };
 
     clickOnSelectAndContinueButton() {
-        this.elements.selectAndContinueButton().click();
+        this.elements.selectAndContinueButton().click()
+        cy.log('Clicked on Select and Continue Successfully')
     }
 }
 

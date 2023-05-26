@@ -5,10 +5,12 @@ class CheckOutPage {
     };
 
     placeHold() {
-        this.elements.holdCabinButton().click();
-        cy.wait(1000);
-        this.elements.placeHoldButton().click();
+        this.elements.holdCabinButton().click()
+        cy.log('Clicked Hold Cabin Button')
+        cy.wait(1000)
+        this.elements.placeHoldButton().click()
+        cy.log('Clicked Place Hold Button')
     }
 }
 
-module.exports = new CheckOutPage();
+module.exports = new CheckOutPage()

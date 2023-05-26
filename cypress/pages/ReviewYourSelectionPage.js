@@ -4,7 +4,8 @@ class ReviewYourSelectionPage {
     };
 
     clickOnHoldForFreeButton() {
-        this.elements.holdForFreeButton().click();
+        this.elements.holdForFreeButton().click()
+        cy.log('Clicked on Hold for Free button successfully')
     }
 }
 

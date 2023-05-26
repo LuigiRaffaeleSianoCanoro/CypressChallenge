@@ -6,14 +6,16 @@ class WhosTravellingPage {
     };
 
     clickOnDropDownMenuAndSelectOption(option) {
-        this.elements.stateOfResidence().click();
+        this.elements.stateOfResidence().click()
+        cy.log('Expanded State of residence dropdown')
         cy.wait(1000)
-        this.elements.dropDownStateOption().contains(option).click();
+        this.elements.dropDownStateOption().contains(option).click()
+        cy.log(`Selected ${option} from the State dropdown`)
     }
 
     clickOnContinueButton() {
         cy.wait(5000);
-        this.elements.continueButton().click();
+        this.elements.continueButton().click()
     }
 }
 

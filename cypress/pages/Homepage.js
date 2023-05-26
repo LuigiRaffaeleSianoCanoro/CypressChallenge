@@ -4,7 +4,8 @@ class HomePage {
     };
 
     clickOnSelectCabinButton() {
-        this.elements.selectCabin().click();
+        this.elements.selectCabin().click()
+        cy.log('Clicked on Select Cabin Button successfully')
     }
 }
 

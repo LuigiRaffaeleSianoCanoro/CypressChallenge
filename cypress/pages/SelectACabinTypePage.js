@@ -5,7 +5,8 @@ class SelectACabinTypePage {
     };
 
     clickOnSelectACabinTypeButton() {
-        this.elements.selectACabinTypeButton().click();
+        this.elements.selectACabinTypeButton().click()
+        cy.log('Clicked on Select a Cabin Button successfully')
     }
 }
 

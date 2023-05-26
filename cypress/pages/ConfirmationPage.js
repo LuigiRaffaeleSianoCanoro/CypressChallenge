@@ -4,7 +4,7 @@ class ConfirmationPage {
     };
 
     getConfirmationMessage() {
-        return this.elements.confirmationMessage();
+        return this.elements.confirmationMessage()
     }
 }
 

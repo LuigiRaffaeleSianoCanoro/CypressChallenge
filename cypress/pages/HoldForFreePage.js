@@ -17,62 +17,69 @@ class HoldForFreePage {
     };
 
     typeOnFirstName(firstName) {
-        this.elements.firstName().type(firstName);
+        this.elements.firstName().type(firstName)
     }
 
     typeOnLastName(lastName) {
-        this.elements.lastName().type(lastName);
+        this.elements.lastName().type(lastName)
     }
 
     typeOnDay(day) {
-        this.elements.day().type(day);
+        this.elements.day().type(day)
     }
 
     typeOnYear(year) {
-        this.elements.year().type(year);
+        this.elements.year().type(year)
     }
 
     typeOnAddress(address) {
-        this.elements.address().type(address);
+        this.elements.address().type(address)
     }
 
     typeOnCity(city) {
-        this.elements.city().type(city);
+        this.elements.city().type(city)
     }
 
     typeOnPostCode(postcode) {
-        this.elements.postCode().type(postcode);
+        this.elements.postCode().type(postcode)
     }
 
     typeOnEmailAddress(email) {
-        this.elements.emailAddress().type(email);
+        this.elements.emailAddress().type(email)
     }
 
     typeOnPhoneNumber(phone) {
-        this.elements.phoneNumber().type(phone);
+        this.elements.phoneNumber().type(phone)
     }
 
     selectMonth(month) {
-        this.elements.month().click();
+        this.elements.month().click()
+        cy.log('Expanded month dropdown')
         cy.wait(1000)
-        this.elements.optionFromDropwdown().contains(month).click();
+        this.elements.optionFromDropwdown().contains(month).click()
+        cy.log(`Selected ${month} from the month dropdown`)
     }
 
     selectGender(gender) {
-        this.elements.gender().click();
+        this.elements.gender().click()
+        cy.log('Expanded gender dropdown')
         cy.wait(1000)
-        this.elements.optionFromDropwdown().contains(gender).click();
+        this.elements.optionFromDropwdown().contains(gender).click()
+        cy.log(`Selected ${gender} from the gender dropdown`)
     }
 
     selectCitizenship(citizenship) {
-        this.elements.citizenship().click();
+        this.elements.citizenship().click()
+        cy.log('Expanded Citizenship dropdown')
         cy.wait(1000)
-        this.elements.optionFromDropwdown().contains(citizenship).click();
+        this.elements.optionFromDropwdown().contains(citizenship).click()
+        cy.log(`Selected ${citizenship} from the citizenship dropdown`)
     }
 
     saveAndContinue(){
-        this.elements.saveAndContinueButton().click();
-        cy.wait(2000);
+        this.elements.saveAndContinueButton().click()
+        cy.wait(2000)
+        cy.log('Clicked Save and Continue successfully')
     }
 }
 

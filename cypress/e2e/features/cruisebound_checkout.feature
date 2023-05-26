@@ -15,6 +15,6 @@ Scenario: Hold for free cabin happy path
     And the user fills the second guest form data
     And the user selects Hold cabin payment option
     Then the confirmation message text is visible
-    Then the confirmation message text contains 'Your cabin is held for'
+    And the confirmation message text contains 'Your cabin is held for'
 
 

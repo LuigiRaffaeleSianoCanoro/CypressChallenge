@@ -6,6 +6,7 @@ const createEsbuildPlugin =
   require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
 
 module.exports = defineConfig({
+  projectId: 'kgf6ie',
   reporter: "cypress-mochawesome-reporter",
   e2e: {
     specPattern: "cypress/e2e/features/*.feature",
