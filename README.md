@@ -22,4 +22,4 @@ the page contains the text “Your cabin is held”.
 
 ## Cypress Cloud
 To see all the tests run enter the following link:
-https://cloud.cypress.io/projects/kgf6ie/runs
+https://cloud.cypress.io/projects/kgf6ie
