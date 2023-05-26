@@ -4,16 +4,16 @@ Contains methods and elements related to the Select Your Cabin page.
 */
 class SelectYourCabinPage {
     elements = {
-    selectAndContinueButton: () =>
-    cy
-    .get('span')
-    .contains('#7300')
-    .parent('span')
-    .parent('div')
-    .parent('div')
-    .parent('div')
-    .parent('div')
-    .find('button[data-cy="btnSelectContinue"]')
+        selectAndContinueButton: () =>
+            cy
+                .get('span')
+                .contains('#7300')
+                .parent('span')
+                .parent('div')
+                .parent('div')
+                .parent('div')
+                .parent('div')
+                .find('button[data-cy="btnSelectContinue"]')
     };
 
     /**    
@@ -21,8 +21,8 @@ class SelectYourCabinPage {
     @returns {void}
     */
     clickOnSelectAndContinueButton() {
-    this.elements.selectAndContinueButton().click();
-    cy.log('Clicked on Select and Continue Successfully');
+        this.elements.selectAndContinueButton().click();
+        cy.log('Clicked on Select and Continue Successfully');
     }
-    }
-    module.exports = new SelectYourCabinPage();
+}
+module.exports = new SelectYourCabinPage();

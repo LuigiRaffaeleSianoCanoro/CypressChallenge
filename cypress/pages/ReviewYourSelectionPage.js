@@ -4,7 +4,7 @@ Contains methods and elements related to the Review Your Selection page.
 */
 class ReviewYourSelectionPage {
     elements = {
-    holdForFreeButton: () => cy.get('button[data-cy="holdForFreeButton"]')
+        holdForFreeButton: () => cy.get('button[data-cy="holdForFreeButton"]')
     };
     /**
     
@@ -12,8 +12,8 @@ class ReviewYourSelectionPage {
     @returns {void}
     */
     clickOnHoldForFreeButton() {
-    this.elements.holdForFreeButton().click();
-    cy.log('Clicked on Hold for Free button successfully');
+        this.elements.holdForFreeButton().click();
+        cy.log('Clicked on Hold for Free button successfully');
     }
-    }
-    module.exports = new ReviewYourSelectionPage();
+}
+module.exports = new ReviewYourSelectionPage();
