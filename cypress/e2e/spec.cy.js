@@ -1,3 +1,5 @@
+const CheckoutPage = require("../pages/CheckoutPage");
+const ConfirmationPage = require("../pages/ConfirmationPage");
 const HoldForFreePage = require("../pages/HoldForFreePage");
 const Homepage = require("../pages/Homepage");
 const ReviewYourSelectionPage = require("../pages/ReviewYourSelectionPage");
@@ -22,7 +24,7 @@ it('Hold for Free', () => {
 
 
   HoldForFreePage.typeOnFirstName('Tyler');
-  HoldForFreePage.typeOnLastName('Durden');  
+  HoldForFreePage.typeOnLastName('Durdeen');  
   HoldForFreePage.typeOnDay('05');  
   HoldForFreePage.typeOnYear('1994');  
   HoldForFreePage.typeOnAddress('Alem');  
@@ -31,36 +33,26 @@ it('Hold for Free', () => {
   HoldForFreePage.typeOnEmailAddress('test@test.com')
   HoldForFreePage.typeOnPhoneNumber('2236190977');
   HoldForFreePage.selectMonth('May');
-
   HoldForFreePage.selectCitizenship('Brazil');
   HoldForFreePage.selectGender('Male');
+  HoldForFreePage.saveAndContinue();
 
-  cy.get('[data-cy="btnSaveContinuePayment"]').click()
+  HoldForFreePage.typeOnFirstName('Luigi');
+  HoldForFreePage.typeOnLastName('Duurden');  
+  HoldForFreePage.typeOnDay('05');  
+  HoldForFreePage.typeOnYear('1994');
+  HoldForFreePage.selectMonth('May');
+  HoldForFreePage.selectCitizenship('Brazil');
+  HoldForFreePage.selectGender('Male'); 
+  HoldForFreePage.saveAndContinue();
 
-  cy.get('[data-cy="firstName"]').type("John")
-  cy.get('[data-cy="lastName"]').type("Durden")
-  cy.get('[data-cy="day"]').type("05")
-  cy.get('[data-cy="year"]').type("1994")
-  
-  cy.get('[data-cy="month').click()
-  cy.wait(1000)
-  cy.get('Button').contains('May').click()
-  cy.get('[data-cy="citizenship"]').click()
-  cy.wait(1000)
-  cy.get('Button').contains('Brazil').click()
-  cy.get('[data-cy="gender"]').click()
-  cy.wait(1000)
-  cy.get('Button').contains('Male').click()
-
-  cy.get('[data-cy="btnSaveContinuePayment"]').click()
 
 
   //pagina de metodo de pago
-  cy.get('Span').contains('Hold cabin').click()
-  cy.wait('1000');
-  cy.get('p').contains('Place hold').click()
+  CheckoutPage.placeHold();
   // pagina de confirmacion de reserva
-  cy.get('Span').contains('Your cabin is held for')
+  ConfirmationPage.getConfirmationMessage().should('be.visible');
+  ConfirmationPage.getConfirmationMessage().should('have.text', 'Your cabin is held for');
 
 })
 })

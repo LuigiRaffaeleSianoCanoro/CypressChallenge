@@ -12,7 +12,8 @@ class HoldForFreePage {
         month: () => cy.get('[data-cy="month'),
         gender: () => cy.get('[data-cy="gender"]'),
         citizenship: () => cy.get('[data-cy="citizenship"]'),
-        optionFromDropwdown: () => cy.get('Button')
+        optionFromDropwdown: () => cy.get('Button'),
+        saveAndContinueButton: () => cy.get('[data-cy="btnSaveContinuePayment"]')
     };
 
     typeOnFirstName(firstName) {
@@ -67,6 +68,11 @@ class HoldForFreePage {
         this.elements.citizenship().click();
         cy.wait(1000)
         this.elements.optionFromDropwdown().contains(citizenship).click();
+    }
+
+    saveAndContinue(){
+        this.elements.saveAndContinueButton().click();
+        cy.wait(1000);
     }
 }
 
