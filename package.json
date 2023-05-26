@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress open --browser chrome --e2e",
-    "html-report": "cypress run --spec cypress/e2e/features/cruisebound_checkout.feature --browser chrome --headed"
+    "html-report": "cypress run --spec cypress/e2e/features/cruisebound_checkout.feature --browser chrome --headed",
+    "startTest":"npx cypress run --record --key 264a5ee3-1653-471e-861b-692a050c2ce7"
   },
   "cypress-cucumber-preprocessor": {
     "cucumberJson": {
@@ -15,6 +16,7 @@
       "fileSuffix": ".cucumber"
     }
   },
+  
   "author": "",
   "license": "ISC",
   "devDependencies": {
