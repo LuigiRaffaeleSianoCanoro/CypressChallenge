@@ -4,11 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress open --browser chrome --e2e",
+    "html-report": "cypress run --spec cypress/e2e/features/cruisebound_checkout.feature --browser chrome --headed"
   },
+  "cypress-cucumber-preprocessor": {
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/Reports",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.13.0"
+    "@badeball/cypress-cucumber-preprocessor": "^17.2.0",
+    "cypress": "^12.13.0",
+    "cypress-mochawesome-reporter": "^3.5.0"
+  },
+  "dependencies": {
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0"
   }
 }

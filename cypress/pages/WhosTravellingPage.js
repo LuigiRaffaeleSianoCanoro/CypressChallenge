@@ -12,7 +12,7 @@ class WhosTravellingPage {
     }
 
     clickOnContinueButton() {
-        cy.wait(2000);
+        cy.wait(5000);
         this.elements.continueButton().click();
     }
 }

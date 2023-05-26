@@ -72,7 +72,7 @@ class HoldForFreePage {
 
     saveAndContinue(){
         this.elements.saveAndContinueButton().click();
-        cy.wait(1000);
+        cy.wait(2000);
     }
 }
 
